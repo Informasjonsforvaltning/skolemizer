@@ -1,0 +1,24 @@
+rule infer
+  command = /home/stigbd/src/informasjonsforvaltning/skolemizer/.nox/pytype/bin/python -m pytype.single --imports_info $imports --module-name $module -V 3.7 -o $out --no-report-errors --nofail --quick $in
+  description = infer $module
+rule check
+  command = /home/stigbd/src/informasjonsforvaltning/skolemizer/.nox/pytype/bin/python -m pytype.single --disable import-error --imports_info $imports --module-name $module -V 3.7 -o $out --analyze-annotated --nofail --quick $in
+  description = check $module
+build /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/noxfile.pyi: check /home/stigbd/src/informasjonsforvaltning/skolemizer/noxfile.py
+  imports = /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/imports/noxfile.imports
+  module = noxfile
+build /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/tests/__init__.pyi: check /home/stigbd/src/informasjonsforvaltning/skolemizer/tests/__init__.py
+  imports = /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/imports/tests.__init__.imports
+  module = tests.__init__
+build /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/skolemizer/skolemizer.pyi: check /home/stigbd/src/informasjonsforvaltning/skolemizer/src/skolemizer/skolemizer.py
+  imports = /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/imports/skolemizer.skolemizer.imports
+  module = skolemizer.skolemizer
+build /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/skolemizer/__init__.pyi: check /home/stigbd/src/informasjonsforvaltning/skolemizer/src/skolemizer/__init__.py | /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/skolemizer/skolemizer.pyi
+  imports = /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/imports/skolemizer.__init__.imports
+  module = skolemizer.__init__
+build /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/tests/test_skolemizer.pyi: check /home/stigbd/src/informasjonsforvaltning/skolemizer/tests/test_skolemizer.py | /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/skolemizer/__init__.pyi
+  imports = /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/imports/tests.test_skolemizer.imports
+  module = tests.test_skolemizer
+build /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/docs/conf.pyi: check /home/stigbd/src/informasjonsforvaltning/skolemizer/docs/conf.py
+  imports = /home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/imports/docs.conf.imports
+  module = docs.conf

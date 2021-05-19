@@ -1,0 +1,7 @@
+# ninja log v5
+0	1240	1621417371376408629	/home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/skolemizer/skolemizer.pyi	702243e69b6abe4d
+1240	2448	1621417372580388388	/home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/noxfile.pyi	ae3baa41fbc91c1e
+2448	3015	1621417373168378504	/home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/tests/__init__.pyi	97257d82c6bc323d
+3016	3607	1621417373756368620	/home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/skolemizer/__init__.pyi	ec048a25bddddbaf
+3607	4708	1621417374848350263	/home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/tests/test_skolemizer.pyi	e0ed229322290711
+4708	5279	1621417375432340446	/home/stigbd/src/informasjonsforvaltning/skolemizer/.pytype/pyi/docs/conf.pyi	57f4cb75a256f0c9
