@@ -7,8 +7,8 @@ class Skolemizer:
     """A class for performing skolemization."""
 
     skolemizations: set = set()
-    baseurl_key = "modelldcatno_baseurl"
-    baseurl_default_value = "http://wwww.digdir.no/"
+    baseurl_key = "skolemizer_baseurl"
+    baseurl_default_value = "http://example.com/"
 
     @staticmethod
     def is_exact_skolemization(skolemization: str) -> bool:
