@@ -53,7 +53,7 @@ Therefore, in order to create stable unit tests one can use the testsutils in or
 E.g pytest-mock's MockFixture permits mocking of the skolemizer:
 ```
     from pytest_mock import MockFixture
-    from skolemizer import skolemization
+    from skolemizer.testutils import skolemization
 
     catalog = Catalog()
 

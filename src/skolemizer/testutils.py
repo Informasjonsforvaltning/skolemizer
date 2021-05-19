@@ -1,4 +1,21 @@
-"""Utils for testing skolemized rdf nodes."""
+"""Utils for testing skolemized rdf nodes.
+
+When creating unit tests of skolemized rdf nodes a uuid will be applied as a substring of the complete skolemization.
+Therefore, in order to create stable unit tests one can use the testsutils in order to mock a stable skolemization.
+
+E.g pytest-mock's MockFixture permits mocking of the skolemizer:
+
+Example:
+    >>> from pytest_mock import MockFixture
+    >>> from skolemizer.testutils import skolemization
+    >>>
+    >>> catalog = Catalog()
+    >>>
+    >>> mocker.patch(
+    >>>     "skolemizer.Skolemizer.add_skolemization",
+    >>>     return_value=skolemization
+    >>> )
+"""
 from typing import List, Union
 
 from skolemizer import Skolemizer
