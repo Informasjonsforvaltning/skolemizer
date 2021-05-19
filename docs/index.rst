@@ -29,23 +29,9 @@ This package can be used like this:
 
 .. code-block::
 
-  from datacatalogtordf import Catalog
-  from skolemizer import Service
+  from skolemizer import Skolemizer
 
-  # Create catalog object
-  catalog = Catalog()
-  catalog.identifier = "http://example.com/catalogs/1"
-  catalog.title = {"en": "A service catalog"}
-  catalog.publisher = "https://example.com/publishers/1"
+  # Adding skolemization to a graph node
 
-  # Create a service:
-  service = Service()
-  service.identifier = "http://example.com/services/1"
-  service.title = {"nb": "inntektsAPI", "en": "incomeAPI"}
-  #
-  # Add service to catalog:
-  catalog.services.append(service)
-
-  # Get rdf representation in turtle (default)
-  rdf = catalog.to_rdf()
-  print(rdf.decode())
+    if not getattr(self, "identifier", None):
+        self.identifier = Skolemizer.add_skolemization()
