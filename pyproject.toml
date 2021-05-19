@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "skolemizer"
-version = "1.0.0"
+version = "1.1.0"
 description= "A library with utils for performing Skolemization on blank nodes (RDF)"
 authors = ["Stig B. Dørmænen <stigbd@gmail.com>", "Frederik Rønnevig <frederik.ronnevig@gmail.com>"]
 license = "Apache-2.0"
