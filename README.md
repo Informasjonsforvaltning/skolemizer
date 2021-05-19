@@ -47,6 +47,32 @@ and then before rdf-serialization of a class:
             self.identifier = Skolemizer.add_skolemization()
 ```
 There should also be a skolemization check performed when serializing object properties.
+When creating unit tests of skolemized rdf nodes a uuid will be applied as a substring of the complete skolemization.
+Therefore, in order to create stable unit tests one can use the testsutils in order to mock a stable skolemization.
+
+E.g pytest-mock's MockFixture permits mocking of the skolemizer:
+```
+    from pytest_mock import MockFixture
+    from skolemizer import skolemization
+
+    catalog = Catalog()
+
+    mocker.patch(
+        "skolemizer.Skolemizer.add_skolemization",
+        return_value=skolemization
+    )
+```
+which outputs e.g:
+```
+        @prefix dct: <http://purl.org/dc/terms/> .
+        @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+        @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+        @prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+        <http://wwww.digdir.no/.well-known/skolem/284db4d2-80c2-11eb-82c3-83e80baa2f94>
+         a dcat:Catalog  .
+
+```
 ### Run all sessions
 ```
 % nox
