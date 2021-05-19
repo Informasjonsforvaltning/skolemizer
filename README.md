@@ -5,6 +5,9 @@
 # skolemizer
 A library with utils for performing Skolemization on blank nodes (RDF)
 
+W3C has a short intro to skolemization here:
+https://www.w3.org/2011/rdf-wg/wiki/Skolemisation
+
 ## Development
 ### Requirements
 - [pyenv](https://github.com/pyenv/pyenv) (recommended)
@@ -27,14 +30,14 @@ A library with utils for performing Skolemization on blank nodes (RDF)
 % poetry install
 ```
 ### Getting started
-Remember before starting to always set the baseurl for skolemization, according to your organizations url. 
+Remember before starting to always set the baseurl for skolemization, according to your organizations url.
 This can be done by setting the environment variable skolemizer_baseurl on your operation system.
 It can also e.g be done run time through Python's os package:
 ```
 os.environ[Skolemizer.baseurl_key] = "https://www.someorganiztion.somedomain/"
 ```
 If not set Skolemizer will use "http://example.com/" as base url.
-In order to invoke the skolemizer for ensuring identifier of rdf-nodes simply add 
+In order to invoke the skolemizer for ensuring identifier of rdf-nodes simply add
 ```
 from skolemizer import Skolemizer
 ```
@@ -43,7 +46,7 @@ and then before rdf-serialization of a class:
         if not getattr(self, "identifier", None):
             self.identifier = Skolemizer.add_skolemization()
 ```
-There should also be a skolemization check performed when serializing object properties. 
+There should also be a skolemization check performed when serializing object properties.
 ### Run all sessions
 ```
 % nox
