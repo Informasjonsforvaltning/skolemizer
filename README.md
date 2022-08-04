@@ -30,9 +30,9 @@ https://www.w3.org/2011/rdf-wg/wiki/Skolemisation
 % poetry install
 ```
 ### Getting started
-Remember before starting to always set the baseurl for skolemization, according to your organizations url.
-This can be done by setting the environment variable skolemizer_baseurl on your operation system.
-It can also e.g be done run time through Python's os package:
+Remember before starting to always set the baseurl for skolemization, according to your organization url.
+This can be done by setting the environment variable skolemizer_baseurl on your operating system.
+It can also e.g. be done run time through Python's os package:
 ```
 os.environ[Skolemizer.baseurl_key] = "https://www.someorganiztion.somedomain/"
 ```
@@ -47,10 +47,10 @@ and then before rdf-serialization of a class:
             self.identifier = Skolemizer.add_skolemization()
 ```
 There should also be a skolemization check performed when serializing object properties.
-When creating unit tests of skolemized rdf nodes a uuid will be applied as a substring of the complete skolemization.
-Therefore, in order to create stable unit tests one can use the testsutils in order to mock a stable skolemization.
+When creating unit tests of skolemized rdf nodes an uuid will be applied as a substring of the complete skolemization.
+Therefore, in order to create stable unit tests one can use the tests utils in order to mock a stable skolemization.
 
-E.g pytest-mock's MockFixture permits mocking of the skolemizer:
+E.g. pytest-mocks MockFixture permits mocking of the skolemizer:
 ```
     from pytest_mock import MockFixture
     from skolemizer.testutils import skolemization
