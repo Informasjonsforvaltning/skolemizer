@@ -1,4 +1,5 @@
 """Sphinx configuration."""
+
 project = "skolemizer"
 author = "Stig B. Dørmænen"
 copyright = f"2021, {author}"

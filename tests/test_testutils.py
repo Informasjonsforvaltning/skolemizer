@@ -1,4 +1,5 @@
 """Test cases for the testutils module."""
+
 from skolemizer.testutils import SkolemUtils
 
 

@@ -1,4 +1,5 @@
 """Module for performing Skolemization on blank nodes."""
+
 import os
 import uuid
 
