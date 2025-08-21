@@ -16,6 +16,7 @@ Example:
     >>>     return_value=skolemization
     >>> )
 """
+
 from typing import List, Union
 
 from skolemizer import Skolemizer

@@ -1,4 +1,5 @@
 """Test cases for the skolemizer module."""
+
 import os
 
 from skolemizer import Skolemizer
