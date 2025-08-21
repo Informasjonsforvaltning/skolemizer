@@ -1,4 +1,6 @@
 name: TestPyPI
+permissions:
+  contents: read
 on:
   push:
     branches:
