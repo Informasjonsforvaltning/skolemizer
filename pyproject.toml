@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "skolemizer"
-version = "2.1.0"
+version = "2.1.1"
 description= "A library with utils for performing Skolemization on blank nodes (RDF)"
 authors = ["Stig B. Dørmænen <stigbd@gmail.com>", "Frederik Rønnevig <frederik.ronnevig@gmail.com>"]
 license = "Apache-2.0"
@@ -17,24 +17,24 @@ classifiers=[
 python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^9.0.2"
-coverage = {extras = ["toml"], version = "^7.13.5"}
+pytest = "^9.0.3"
+coverage = {extras = ["toml"], version = "^7.14.0"}
 pytest-cov = "^7.1.0"
-black = "^26.3.1"
+black = "^26.5.1"
 flake8 = "^7.3.0"
 flake8-bandit = "^4.1.1"
 flake8-black = "^0.4.0"
 flake8-bugbear = "^25.11.29"
 flake8-import-order = "^0.19.2"
 safety = "^3.7.0"
-mypy = "^1.20.0"
+mypy = "^2.1.0"
 flake8-annotations = "^3.2.0"
 flake8-docstrings = "^1.7.0"
 darglint = "^1.8.1"
 Pygments = "^2.20.0"
 xdoctest = "^1.3.2"
 sphinx = "^9.1.0"
-sphinx-autodoc-typehints = "^3.9.11"
+sphinx-autodoc-typehints = "^3.10.2"
 codecov = "^2.1.13"
 pytest-mock = "^3.15.1"
 
