@@ -3,6 +3,9 @@
 [![PyPI](https://img.shields.io/pypi/v/skolemizer.svg)](https://pypi.org/project/skolemizer/)
 [![Read the Docs](https://readthedocs.org/projects/skolemizer/badge/)](https://skolemizer.readthedocs.io/)
 # skolemizer
+
+> ⚠️ Dette repoet er arkivert og vedlikeholdes ikke lenger.
+
 A library with utils for performing Skolemization on blank nodes (RDF)
 
 W3C has a short intro to skolemization here:
