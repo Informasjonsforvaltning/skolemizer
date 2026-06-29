@@ -4,7 +4,7 @@
 [![Read the Docs](https://readthedocs.org/projects/skolemizer/badge/)](https://skolemizer.readthedocs.io/)
 # skolemizer
 
-> ⚠️ Dette repoet er arkivert og vedlikeholdes ikke lenger.
+> ⚠️ This repository is archived and is no longer maintained.
 
 A library with utils for performing Skolemization on blank nodes (RDF)
 
